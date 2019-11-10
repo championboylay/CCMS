@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"
+        integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+            integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+    <style>
+        .form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+#map {
+	width: 300px;
+	height: 550px;
+}
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            console.log('L ',L);
+            
+            // center of the map
+            var center = [16.871311, 96.199379];
+
+            // Create the map
+            var map = L.map('map').setView(center, 5);
+
+            // Set up the OSM layer
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 30
+            }).addTo(map);
+
+            // add a marker in the given location
+            L.marker(center).addTo(map);
+
+
+            /* Start of  Chart JS */
+            var canvas = document.getElementById('myChart');
+            var data = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        backgroundColor: "rgba(255,99,132,0.2)",
+                        borderColor: "rgba(255,99,132,1)",
+                        borderWidth: 2,
+                        hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                        hoverBorderColor: "rgba(255,99,132,1)",
+                        data: [65, 59, 30, 81, 56, 55, 40],
+                    }
+                ]
+            };
+            var option = {
+                animation: {
+                    duration: 5000
+                }
+
+            };
+            var myBarChart = Chart.Bar(canvas, {
+                data: data,
+                options: option
+            });
+
+
+            var ctx = document.getElementById("myChartPie").getContext('2d');
+            var myChartPie = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ["Green", "Blue", "Gray", "Purple", "Yellow", "Red", "Black"],
+                    datasets: [{
+                        backgroundColor: [
+                            "#2ecc71",
+                            "#3498db",
+                            "#95a5a6",
+                            "#9b59b6",
+                            "#f1c40f",
+                            "#e74c3c",
+                            "#34495e"
+                        ],
+                        data: [12, 19, 3, 17, 28, 24, 7]
+                    }]
+                }
+            });
+            
+        /* End of  Chart JS */
+
+        // go to list 
+        $("#map,#myChart, #myChartPie").on('click',function(){
+            window.location = "list.html";
+        })
+
+        })
+    </script>
+</head>
+<body>
+    <div id="wrapper" class="animate">
+            <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+                <span class="navbar-toggler-icon leftmenutrigger"></span>
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav animate side-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="notification.html">Notification 
+                               </a>
+                              
+                        </li>
+                        <span class="badge badge-secondary" style="background: none;    font-size: 15px;padding:0px">5</span>
+                    </ul>
+                    <ul class="navbar-nav ml-md-auto d-md-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Welcome User1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">LogOut</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </div>
+        <br /><br /><br />
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm">
+                    <div class=" row no-gutters align-items-center" style="padding-top:10px 20px 10px 40px;">
+                        <div class="col-auto">
+                            <i class="fas fa-search h4 text-body" style="padding-left: 10px;"></i>
+                        </div>
+                        <!--end of col-->
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" type="search"
+                                placeholder="Search regions or state">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit">Search</button>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                </form>
+            </div>
+            <!--end of col-->
+        </div>
+    </div>
+    <div style="margin: 10px;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div id="map"></div>
+            </div> 
+            <div class="col-6">
+                <canvas id="myChart" width="400" height="200"></canvas>
+                <canvas id="myChartPie"></canvas>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

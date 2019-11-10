@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notifications</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+    .notice {
+    padding: 15px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+
+/* Primary */
+.notice-primary {
+    border-left: 6px solid #cce5ff !important;
+}
+.notice-primary>strong {
+    color: #004085;
+}
+/* Secondary */
+.notice-secondary {
+    border-left: 6px solid #e2e3e5 !important;
+}
+.notice-secondary>strong {
+    color: #383d41;
+}
+/* Success */
+.notice-success {
+    border-left: 6px solid #d4edda !important;
+}
+.notice-success>strong {
+    color: #155724;
+}
+/* Information */
+.notice-info {
+    border-left: 6px solid #d1ecf1 !important;
+}
+.notice-info>strong {
+    color: #0c5460;
+}
+/* Warning */
+.notice-warning {
+    border-left: 6px solid #fff3cd !important;
+}
+.notice-warning>strong {
+    color: #856404;
+}
+/* Danger */
+.notice-danger {
+    border-left: 6px solid #f8d7da !important;
+}
+.notice-danger>strong {
+    color: #721c24;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper" class="animate">
+        <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+            <span class="navbar-toggler-icon leftmenutrigger"></span>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav animate side-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notification.html">Notification</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-md-auto d-md-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Welcome User1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br /><br /><br />
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+                <div class="notice notice-primary alert fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+    
+                    <strong>User 2 is updated the data:</strong>
+                    <br>
+                    Updated the important data
+                </div>
+    
+                <div class="notice notice-secondary alert fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+    
+                    <strong>User 3 is updated the data:</strong>
+                    <br>
+                    Updated the important data
+                </div>
+    
+                <div class="notice notice-success alert fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+    
+                    <strong>User 5 inserte the data</strong>
+                    <br>
+                    Your attention needs!
+                </div>
+    
+                <div class="notice notice-info alert fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+    
+                    <strong>User 5 inserte the data</strong>
+                    <br>
+                    Your attention needs!
+                </div>
+    
+                <div class="notice notice-warning alert fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+    
+                    <strong>User 5 inserte the data</strong>
+                    <br>
+                    Your attention needs!
+                </div>
+    
+                <div class="notice notice-danger alert fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+    
+                    <strong>User 5 inserte the data</strong>
+                    <br>
+                    Your attention needs!
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

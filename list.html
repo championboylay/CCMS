@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="animate">
+        <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+            <span class="navbar-toggler-icon leftmenutrigger"></span>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav animate side-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notification.html">Notification
+                        </a>
+        
+                    </li>
+                    <span class="badge badge-secondary" style="background: none;    font-size: 15px;padding:0px">5</span>
+                </ul>
+                <ul class="navbar-nav ml-md-auto d-md-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Welcome User1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="container-fluid"></div>
+    <main>
+        <div class="container my-5">
+            <div class="card-body text-center">
+                <h4 class="card-title">Yangon Region</h4>
+                <p class="card-text">Dagon Myothit East Township</p>
+            </div>
+            <div class="card">
+              
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">List Name</th>
+                            <th scope="col">Deadline</th>
+                            <th scope="col">Edit List </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>
+                                <a class="btn btn-sm btn-info" href="form.html"><i class="fas fa-info-circle"></i> Details</a>  
+                                <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                                <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a>
+                               
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>
+                                <a class="btn btn-sm btn-info" href="form.html"><i class="fas fa-info-circle"></i> Details</a>  
+                                <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                                <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a>
+                               
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>
+                                <a class="btn btn-sm btn-info" href="form.html"><i class="fas fa-info-circle"></i> Details</a>  
+                                <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                                <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a>
+                               
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Large modal -->
+    
+    
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class=" card col-8 offset-2 my-2 p-3">
+                            <form>
+                                <div class="form-group">
+                                    <label for="listname">List name</label>
+                                    <input type="text" class="form-control" name="listname" id="listname"
+                                        placeholder="Enter your listname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="datepicker">Deadline</label>
+                                    <input type="text" class="form-control" name="datepicker" id="datepicker"
+                                        placeholder="Pick up a date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="datepicker">Add a list item</label>
+                                    <div class="input-group">
+    
+                                        <input type="text" class="form-control" placeholder="Add an item"
+                                            aria-label="Search for...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-secondary" type="button">Go!</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+    </div>
+</body>
+</html>
